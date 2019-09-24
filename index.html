@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Waitstaff Calculator</title>
+</head>
+<body>
+  <header>
+    <h1>WAITSTAFF CALCULATOR</h1>
+  </header>
+  <main>
+    <section class=".js-meal-details">
+      <h2>ENTER MEAL DETAILS</h2>
+      <form>
+        BASE MEAL PRICE: $
+        <input type="number" name="base-price" value="price" step="0.01" required><br>
+        TAX RATE: %
+        <input type="number" name="tax" value="tax" step="0.01" required><br>
+        TIP PERCENTAGE: %
+        <input type="number" name="tip" value="tip" step="0.01" required><br>
+        <input type="submit" value="Submit">
+        <button type="button">Cancel</button>
+      </form>
+    </section>
+    <section class="js-customer-charges">
+      <h2>CUSTOMER CHARGES</h2>
+      <p>
+        SUBTOTAL:
+        TIP:
+        TOTAL:
+      </p>
+    </section>
+    <section class="js-earnings-info">
+      <h2>MY EARNINGS INFO</h2>
+      <p>
+        TIP TOTAL:
+        MEAL COUNT:
+        AVERAGE TIP PER MEAL:
+      </p>
+    </section>
+    <section class="reset-button js-reset-button">
+        <button type="button">RESET</button>
+    </section>
+  </main>
+
+
+
+
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>
