@@ -11,26 +11,26 @@
     <h1>WAITSTAFF CALCULATOR</h1>
   </header>
   <main>
-    <section class=".js-meal-details">
+    <section class="js-meal-details">
       <h2>ENTER MEAL DETAILS</h2>
-      <form>
+      <form class="js-meal-input">
         BASE MEAL PRICE: $
-        <input type="number" name="base-price" value="price" step="0.01" required><br>
+        <input class="js-meal-price" type="number" name="base-price" step="0.01" required><br>
         TAX RATE: %
-        <input type="number" name="tax" value="tax" step="0.01" required><br>
+        <input class="js-tax-rate" type="number" name="tax" step="0.01" required><br>
         TIP PERCENTAGE: %
-        <input type="number" name="tip" value="tip" step="0.01" required><br>
-        <input type="submit" value="Submit">
-        <button type="button">Cancel</button>
+        <input class="js-tip-rate" type="number" name="tip" step="0.01" required><br>
+        <input type="submit" value="Submit" class="js-input-button">
+        <button type="button" class="js-cancel-button">Cancel</button>
       </form>
     </section>
     <section class="js-customer-charges">
-      <h2>CUSTOMER CHARGES</h2>
+      <!-- <h2>CUSTOMER CHARGES</h2>
       <p>
         SUBTOTAL:
         TIP:
         TOTAL:
-      </p>
+      </p> -->
     </section>
     <section class="js-earnings-info">
       <h2>MY EARNINGS INFO</h2>
