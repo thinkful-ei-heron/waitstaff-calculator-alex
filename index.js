@@ -1,5 +1,5 @@
 const store = {
-  mealCounter: 0, tipCounter: 0, subTotal: 0, tipAmount: 0, totalAmount: 0
+  mealCounter: 0, tipCounter: 0, subTotal: 0, tipAmount: 0, totalAmount: 0, avgTip: 0
 }
 
 
@@ -10,21 +10,27 @@ const resetButton = function() {
 
 //renders html for MY EARNINGS INFO html
 const renderMyEarningsInfo = function() {
-
+  const myEarningsString = `<h2>MY EARNINGS INFO</h2>
+  <p>
+    TIP TOTAL: ${store.tipCounter.toFixed(2)} <br>
+    MEAL COUNT: ${store.mealCounter} <br>
+    TIP AVERAGE: ${store.avgTip.toFixed(2)}
+  </p>`
+  $('.js-earnings-info').html(myEarningsString);
 }
 
 //renders html for CUSTOMER CHARGES html
 const renderCustomerCharges = function() {
   const customerChargesString = `<h2>CUSTOMER CHARGES</h2>
   <p>
-    SUBTOTAL: ${store.subTotal} <br>
-    TIP: ${store.tipAmount} <br>
-    TOTAL: ${store.totalAmount}
+    SUBTOTAL: ${store.subTotal.toFixed(2)} <br>
+    TIP: ${store.tipAmount.toFixed(2)} <br>
+    TOTAL: ${store.totalAmount.toFixed(2)}
   </p>`
   $('.js-customer-charges').html(customerChargesString);
 }
 
-const tipCalc = function(mealPrice, taxRate, tipRate) {
+const valCalc = function(mealPrice, taxRate, tipRate) {
   const grossTax = mealPrice * taxRate;
   const taxAmount = grossTax / 100;
   const subTotal = parseInt(mealPrice) + parseInt(taxAmount);
@@ -34,6 +40,8 @@ const tipCalc = function(mealPrice, taxRate, tipRate) {
   store.tipAmount = tipAmount;
   store.subTotal = subTotal;
   store.totalAmount = totalAmount;
+  store.avgTip = parseInt(store.tipCounter) / parseInt(store.mealCounter);
+  
 }
 
 //gathers numbers from meal info form
@@ -51,8 +59,9 @@ const submitMealNumbers = function() {
       $('.js-tax-rate').val('');
       $('.js-tip-rate').val('');
       store.mealCounter++;
-      tipCalc(mealPrice, taxRate, tipRate);
+      valCalc(mealPrice, taxRate, tipRate);
       renderCustomerCharges();
+      renderMyEarningsInfo();
     });
   };
 
@@ -72,6 +81,7 @@ const handleCalculator = function() {
   submitMealNumbers();
   handleCancelClick();
   renderCustomerCharges();
+  renderMyEarningsInfo();
 }
 
 $(handleCalculator);
