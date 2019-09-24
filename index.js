@@ -1,12 +1,8 @@
 const store = {
   mealCounter: 0, tipCounter: 0, subTotal: 0, tipAmount: 0, totalAmount: 0, avgTip: 0
-}
+};
 
 
-//listens for reset button
-const resetButton = function() {
-
-}
 
 //renders html for MY EARNINGS INFO html
 const renderMyEarningsInfo = function() {
@@ -17,7 +13,7 @@ const renderMyEarningsInfo = function() {
     TIP AVERAGE: ${store.avgTip.toFixed(2)}
   </p>`
   $('.js-earnings-info').html(myEarningsString);
-}
+};
 
 //renders html for CUSTOMER CHARGES html
 const renderCustomerCharges = function() {
@@ -28,7 +24,7 @@ const renderCustomerCharges = function() {
     TOTAL: ${store.totalAmount.toFixed(2)}
   </p>`
   $('.js-customer-charges').html(customerChargesString);
-}
+};
 
 const valCalc = function(mealPrice, taxRate, tipRate) {
   const grossTax = mealPrice * taxRate;
@@ -41,8 +37,7 @@ const valCalc = function(mealPrice, taxRate, tipRate) {
   store.subTotal = subTotal;
   store.totalAmount = totalAmount;
   store.avgTip = parseInt(store.tipCounter) / parseInt(store.mealCounter);
-  
-}
+};
 
 //gathers numbers from meal info form
 const submitMealNumbers = function() {
@@ -76,12 +71,20 @@ const handleCancelClick = function() {
   });
 };
 
+//listens for reset button
+const resetButton = function() {
+  $('.js-reset-button').click(function(event) {
+    location.reload();
+  });
+};
+
 //calls all necessary functions
 const handleCalculator = function() {
   submitMealNumbers();
   handleCancelClick();
   renderCustomerCharges();
   renderMyEarningsInfo();
-}
+  resetButton();
+};
 
 $(handleCalculator);
