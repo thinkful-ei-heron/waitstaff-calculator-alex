@@ -1,0 +1,38 @@
+body {
+  font-family: 'Lucida Grande', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  padding: 100px;
+  font-size: 13px;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  font-size: 50px;
+}
+
+div {
+  height: 50%;
+  background: #fff;
+  margin: 0 auto;
+  width: 250px;
+  padding: 100px;
+  text-align: center;
+  /* border-radius */
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  /* box-shadow */
+  -webkit-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+  -moz-box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+  box-shadow: rgba(0,0,0,0.2) 0px 1px 3px;
+}
+
+.mealDetails {
+  float: left;
+  height: 
+}
+
+.right {
+  float: right;
+  height: 50;
+}

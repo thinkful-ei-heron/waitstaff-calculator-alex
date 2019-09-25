@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 1%;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue";
+}
+header {
+  text-align: center;
+  margin: 5px;
+  margin-right: 50px;
+}
+main {
+  width: 60%;
+  display: inline-block;
+  margin-left: 30%;
+}
+h2 {
+  border-bottom: 2px solid black;
+  font-size: 120%;
+}
+.mealDetails {
+  margin: 5px;
+  border: 2px solid black;
+  float: left; 
+  display: block; 
+  width: 30%;
+  height: 305px;
+}
+.js-input-button, .js-cancel-button {
+  margin-top: 50px;
+  padding: 10px 21px;
+}
+.mealInput {
+  padding-top: 15px;
+  text-align: center;
+}
+.js-meal-price {
+  width: 40%;
+}
+.js-tip-rate, .js-tax-rate {
+  width: 20%;
+}
+.rightSide{
+  display: flex;
+  flex-direction: column;
+  justify-content: right;
+  float: left;
+  display: block;
+  width: 30%;
+}
+.js-customer-charges{
+  margin: 5px;
+  border: 2px solid black;
+  height: 150px;
+}
+.js-earnings-info{
+  margin: 5px;
+  border: 2px solid black;
+  height: 150px;
+}
+.reset-button {
+  text-align: right;
+  margin-right: 500px;
+  margin-top: 10px;
+}
+.earningBox {
+  margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  text-align-last: justify;
+}
+.chargesBox {
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    text-align-last: justify;
+}
+.resetButton {
+  padding: 10px 21px;
+}
